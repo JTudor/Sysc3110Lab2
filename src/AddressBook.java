@@ -22,6 +22,12 @@ public class AddressBook {
 			System.out.println("Contact removed successfully");
 		}
 		System.out.println("Address book");
+		if(myAddressBook.addBuddy(new BuddyInfo("Jessica", "301 Carleton street", "1111234567890", 23))) {
+			System.out.println("Contact added successfully");
+		}
+		if(myAddressBook.removeBuddy("Jessica")) {
+			System.out.println("Contact removed successfully");
+		}
 	}
 	public boolean addBuddy(BuddyInfo newBuddy) {
 		addressBook.add(newBuddy);
