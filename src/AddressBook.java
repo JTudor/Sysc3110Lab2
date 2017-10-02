@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+//https://github.com/JTudor/Sysc3110Lab2.git
 public class AddressBook {
 	private ArrayList<BuddyInfo> addressBook;//binary search tree
 	public AddressBook() {
@@ -22,16 +22,19 @@ public class AddressBook {
 			System.out.println("Contact removed successfully");
 		}
 		System.out.println("Address book");
-		if(myAddressBook.addBuddy(new BuddyInfo("Jessica", "301 Carleton street", "1111234567890", 23))) {
+		if(myAddressBook.addBuddy(new BuddyInfo("Brad", "301 Carleton street", "1111234567890", 23))) {
 			System.out.println("Contact added successfully");
 		}
-		if(myAddressBook.removeBuddy("Jessica")) {
+		if(myAddressBook.removeBuddy("Brad")) {
 			System.out.println("Contact removed successfully");
 		}
 	}
 	public boolean addBuddy(BuddyInfo newBuddy) {
-		addressBook.add(newBuddy);
-		return true;
+		if(newBuddy!=null) {
+			addressBook.add(newBuddy);
+			return true;
+		}
+		return false;
 	}
 	public boolean removeBuddy(String name) {
 		for (BuddyInfo buddy:addressBook) {
