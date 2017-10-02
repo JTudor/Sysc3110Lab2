@@ -7,6 +7,7 @@ public class BuddyInfo {
 	private int rank;
 	public BuddyInfo (String name, String address, String phoneNumber, int age) {
 		this.name=name;
+		
 		this.address=address;
 		this.phoneNumber=phoneNumber;
 		this.age=age;
